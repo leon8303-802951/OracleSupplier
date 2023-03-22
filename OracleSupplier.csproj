@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6E8E5D55-8170-4FBE-B1F1-09250EAA9EC8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OracleSupplier</RootNamespace>
+    <AssemblyName>OracleSupplier</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\JobEnv-forRN\Jobs\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BoxmanBase">
+      <HintPath>..\..\..\..\JobEnv\BoxmanBase.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="keroroConnectBase">
+      <HintPath>..\..\..\..\JobEnv\keroroConnectBase.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LogMgr">
+      <HintPath>..\..\..\..\JobEnv\LogMgr.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\JobEnv\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="system.data.sqlite">
+      <HintPath>..\..\..\..\JobEnv\system.data.sqlite.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Winnie.DataAccess">
+      <HintPath>C:\Users\PCH806623\Documents\Project\Github\PChome24h\JobEnv\Winnie.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="WinnieJob">
+      <HintPath>..\..\..\..\JobEnv\WinnieJob.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\ParseFnModel.cs" />
+    <Compile Include="Models\PChomeEmpModel.cs" />
+    <Compile Include="Models\Secrets.cs" />
+    <Compile Include="Models\Supplier\OREMPExportColumnItemMd.cs" />
+    <Compile Include="Models\Supplier\OREMPOracleFileSchemaDefineItemMd.cs" />
+    <Compile Include="Models\Supplier\SupplierSame.cs" />
+    <Compile Include="Models\UpdateSupplierAccountReturnModel.cs" />
+    <Compile Include="ORSyncOracleData\Model\ApiResultModel.cs" />
+    <Compile Include="ORSyncOracleData\Model\CreateWorkerModel2.cs" />
+    <Compile Include="ORSyncOracleData\Model\CreateWorkerModel3.cs" />
+    <Compile Include="ORSyncOracleData\Model\CreateWorkerModel4.cs" />
+    <Compile Include="ORSyncOracleData\Model\EmployeeAssignmentsModel.cs" />
+    <Compile Include="ORSyncOracleData\Model\MiddleModel.cs" />
+    <Compile Include="ORSyncOracleData\Model\MiddleModel2.cs" />
+    <Compile Include="ORSyncOracleData\Model\MiddleReturn.cs" />
+    <Compile Include="ORSyncOracleData\Model\OracleApiChkBankBranchesMd.cs" />
+    <Compile Include="ORSyncOracleData\Model\OracleApiReturnObj.cs" />
+    <Compile Include="ORSyncOracleData\Model\OracleEmployeeAssignmentSelf2.cs" />
+    <Compile Include="ORSyncOracleData\Model\OracleEmployeeAssignmentSelfModel.cs" />
+    <Compile Include="ORSyncOracleData\Model\OracleEmployeeIncludeAssignmentsCollection.cs" />
+    <Compile Include="ORSyncOracleData\Model\OracleEmployees.cs" />
+    <Compile Include="ORSyncOracleData\Model\OracleJobIDReturnObject.cs" />
+    <Compile Include="ORSyncOracleData\Model\OracleResponseWorkersObj.cs" />
+    <Compile Include="ORSyncOracleData\Model\OracleReturnWorkers.cs" />
+    <Compile Include="ORSyncOracleData\Model\OracleUser.cs" />
+    <Compile Include="ORSyncOracleData\Model\OREmpBankData.cs" />
+    <Compile Include="ORSyncOracleData\Model\OREmpNoData.cs" />
+    <Compile Include="ORSyncOracleData\Model\ORGetData.cs" />
+    <Compile Include="ORSyncOracleData\Model\ResultObject.cs" />
+    <Compile Include="ORSyncOracleData\Model\Supplier.cs" />
+    <Compile Include="ORSyncOracleData\Model\SupplierAddrReturnModel.cs" />
+    <Compile Include="ORSyncOracleData\Model\SupplierAssignmentReturnModel.cs" />
+    <Compile Include="ORSyncOracleData\Model\SupplierBankAccountReturnModel.cs" />
+    <Compile Include="ORSyncOracleData\Model\SupplierBankData.cs" />
+    <Compile Include="ORSyncOracleData\Model\SupplierPayeeReturnModel.cs" />
+    <Compile Include="ORSyncOracleData\Model\SupplierResponseModel.cs" />
+    <Compile Include="ORSyncOracleData\Model\SupplierSiteReturnModel.cs" />
+    <Compile Include="ORSyncOracleData\Model\SuspendUserModel.cs" />
+    <Compile Include="ORSyncOracleData\Model\SuspendUserReturnModel.cs" />
+    <Compile Include="ORSyncOracleData\Model\WorkerNamesResponseObj.cs" />
+    <Compile Include="ORSyncOracleData\SyncOracleDataBack.cs" />
+    <Compile Include="SCS\FtEmployees.cs" />
+    <Compile Include="SCS\HREmployeeData.cs" />
+    <Compile Include="SCS\NameValueMapping.cs" />
+    <Compile Include="SCS\ORHRPushDataModel.cs" />
+    <Compile Include="SCS\ScsDeptQueryModel.cs" />
+    <Compile Include="SCS\ScsDeptReturnModel.cs" />
+    <Compile Include="SCS\ScsDeptsQueryModel.cs" />
+    <Compile Include="SCS\ScsDeptsReturnModel.cs" />
+    <Compile Include="SCS\ScsEmployeesQueryModel.cs" />
+    <Compile Include="SCS\SCSLog.cs" />
+    <Compile Include="SCS\ScsLoginModel.cs" />
+    <Compile Include="SCS\ScsLoginReturnModel.cs" />
+    <Compile Include="SCS\SCSUtils.cs" />
+    <Compile Include="SCS\SCS_Const.cs" />
+    <Compile Include="Supplier.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Alvin的Job工具DLL\AQuartzJobUTL\AQuartzJobUTL.csproj">
+      <Project>{f2983f69-c7e5-4ebd-be80-17649e771764}</Project>
+      <Name>AQuartzJobUTL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="更新備忘.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
